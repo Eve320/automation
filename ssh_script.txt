@@ -1,0 +1,17 @@
+# CONFIGURE SSH ON CISCO SWITCH
+
+enable
+config t
+username eve pass cisco
+username eve priv 15
+
+line vty 0 4
+login local
+transport input all
+
+ip domain-name cciepython.com
+crypto key generate rsa
+1024
+
+end
+wr
